@@ -11,13 +11,12 @@ export default function Home() {
       <h1 className='w-[70%] max-sm:w-[100%] flex justify-center items-center flex-col gap-2 rounded-full px-[40px] py-[15px] text-center text-[#ebe5e5]'>Explore & Disseminate
         <br className='sm:hidden' />
         <span className='typewriter mx-2 text-[#ffe29f]'>
-          {/* ChatGPT Prompts */}
-          Pri Prompts
+          ChatGPT Prompts
+          {/* Pri Prompts */}
         </span>
         <div class="sprinkler text-center"></div>
       </h1>
 
-      
       <p className='max-w-4xl mx-auto text-center font-bold text-[#383838]'>
         <Typewriter
           options={{
