@@ -17,7 +17,7 @@ export default function Home() {
         <div class="sprinkler text-center"></div>
       </h1>
 
-      {/* 
+      
       <p className='max-w-4xl mx-auto text-center font-bold text-[#383838]'>
         <Typewriter
           options={{
@@ -26,9 +26,9 @@ export default function Home() {
             loop: true,
           }}
         />
-      </p> */}
+      </p>
 
-      <p className='max-w-4xl mx-auto text-center font-bold text-[#383838]'>
+      {/* <p className='max-w-4xl mx-auto text-center font-bold text-[#383838]'>
         <Typewriter
           options={{
             strings: ['Heyy Pri, go ahead and explore prompts. Hope you like it. Happy prompting!!!'],
@@ -36,7 +36,7 @@ export default function Home() {
             loop: true,
           }}
         />
-      </p>
+      </p> */}
 
       {/* <p className='max-w-4xl mx-auto text-center font-bold text-extra-color'> PromptCraft is a AI-driven platform designed to explore, generate, and distribute engaging prompts.</p> */}
 
