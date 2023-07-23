@@ -48,7 +48,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     return (
         <div className="card-items flex flex-col gap-3 bg-white p-6 text-extra-color rounded-md cursor-pointer hover:bg-[#ffe9e9]">
 
-            <div className="card-title flex justify-around gap-3 relative" onClick={handleProfileClick}>
+            <div className="card-title flex justify-around gap-3 relative">
 
                 <Image
                     src={post.creator.image}
@@ -56,6 +56,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
                     height={40}
                     alt="Card"
                     className='grow-0'
+                    onClick={handleProfileClick}
                 />
 
                 <div className="name grow">
