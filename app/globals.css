@@ -1,27 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* Color palette */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #FF6767;
+  /* Replace with your primary color */
+  --secondary-color: #55BCC9;
+  /* Replace with your secondary color */
+  --accent-color: #FFD166;
+  /* Replace with your accent color */
+  --background-color: #F6F6F6;
+  /* Replace with your background color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+/* Applying the color palette to the background */
+body {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  /* background-repeat: no-repeat; */
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  font-weight: bold;
+
 }
+
+h1 span {
+  color: var(--accent-color);
+}
+
+.logo {
+  color: #b72323;
+  font-weight: bold;
+}
+
+
+
+/* effects Styles */
+
+.sprinkler {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  animation: sprinkle 2s ease-in-out infinite;
+}
+
+@keyframes sprinkle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.sprinkler:before,
+.sprinkler:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation: drop 2s ease-in-out infinite;
+}
+
+.sprinkler:before {
+  transform: translate(-50%, -50%);
+  animation-delay: 0.5s;
+}
+
+.sprinkler:after {
+  transform: translate(-50%, -50%);
+  animation-delay: 1s;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(-50%, -50%) translateY(-30px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(30px);
+    opacity: 0;
+  }
+}
+
+@media (max-width:750px) {
+  .main_logo {
+    /* font-size: 55%; */
+  }
+}
+
